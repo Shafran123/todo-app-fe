@@ -36,7 +36,7 @@ const EditTodo = (props) => {
         setLoading(true)
 
         let data = {
-            id: '12311sdaasds2',
+            id: todo_id,
             title: title,
             desc: desc
         }
