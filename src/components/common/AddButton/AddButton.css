@@ -1,0 +1,12 @@
+.buttonMainDiv{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}

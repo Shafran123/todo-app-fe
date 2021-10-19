@@ -1,0 +1,48 @@
+.mainContainer1{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.mainContainer{
+    height: 40px;
+    width: 50vw;
+    border-radius: 5px;
+    text-align:left;
+    background-color:gainsboro;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.txtTitle{
+    font-weight:600;
+}
+
+.txtDescription{
+    font-size: 12px;
+    text-align:left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.editIcon{
+    height: 18px;
+    width: 18px;
+}
+
+.deleteIcon{
+    height: 18px;
+    width: 18px;
+}
+
+.spacer{
+    width: 10px;
+}
+
+.actions{
+    display:flex;
+}
