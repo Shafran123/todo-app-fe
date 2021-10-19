@@ -9,24 +9,24 @@ import './Todo.css'
 const Todo = (props) => {
 
     const history = useHistory();
-    let { data } = props;
+    let { data, index } = props;
 
     return (
         <div className="mainContainer1">
             <div className="mainContainer">
                 <div className="txtTitle">
                     <span>
-                        #{data?.id}.
+                        #{index + 1}.
                     </span>&nbsp;
                     {data?.title}
                 </div>
                 <div className="actions">
-                    <div onClick={() => history.push(`/edit-todo/${data.id}` , { data:data})}>
+                    <div onClick={() => history.push(`/edit-todo/${data.id}`, { data: data })}>
                         <img src={edit} alt={"edit"} className="editIcon" />
                     </div>
 
                     <div className="spacer">
-                         
+
                     </div>
 
                     <div onClick={() => console.log('delete')}>
@@ -35,9 +35,20 @@ const Todo = (props) => {
                 </div>
             </div>
 
-            <div className="txtDescription">
-                Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+            <div>
+                <div className="txtId">
+
+                    Id : {data?.id}
+
+                  
+                </div>
+
+                <div className="txtDescription">
+
+                Description : Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+                </div>
             </div>
+
         </div>
 
     )

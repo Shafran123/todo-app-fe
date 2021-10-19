@@ -21,10 +21,18 @@
     font-weight:600;
 }
 
+.txtId{
+    font-size: 12px;
+    text-align:left;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
 .txtDescription{
     font-size: 12px;
     text-align:left;
-    padding-top: 10px;
     padding-left: 20px;
     padding-bottom: 10px;
 }
