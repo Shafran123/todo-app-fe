@@ -21,7 +21,7 @@ const Todo = (props) => {
                     {data?.title}
                 </div>
                 <div className="actions">
-                    <div onClick={() => history.push(`/edit-todo/${data.id}`)}>
+                    <div onClick={() => history.push(`/edit-todo/${data.id}` , { data:data})}>
                         <img src={edit} alt={"edit"} className="editIcon" />
                     </div>
 

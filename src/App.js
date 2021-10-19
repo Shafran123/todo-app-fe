@@ -8,7 +8,7 @@ import AddTodo from './components/pages/AddTodo/AddTodo';
 function App() {
   return (
     <div className="App">
-      <h1>
+      <h1 className="mt-3">
         Todo App
       </h1>
       <BrowserRouter>
@@ -18,11 +18,16 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/add-todo">
-            <AddTodo />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <AddTodo />
+            </div>
+
           </Route>
 
           <Route path="/edit-todo/:id">
-            <EditTodo />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <EditTodo />
+            </div>
           </Route>
         </Switch>
 
