@@ -68,3 +68,19 @@ export const editTodo = (body, callback) => (dispatch) => {
         callback(false)
     })
 }
+
+
+export const deleteTodo = (body, callback) => (dispatch) => {
+    return axios({
+        url: `http://localhost:3001/api/v1/delete-todo?id=${body.id}`,
+        timeout: 20000,
+        method: 'delete',
+        responseType: 'json'
+    }).then(res => {
+        console.log(res);
+        callback(true)
+    }).catch(err => {
+        console.log(err);
+        callback(false)
+    })
+}

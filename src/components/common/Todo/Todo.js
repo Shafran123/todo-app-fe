@@ -1,15 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
 import edit from '../../../assets/icons/edit.png'
 import trash from '../../../assets/icons/trash.png'
 import './Todo.css'
 
+import { deleteTodo } from '../../../redux/actions/todoActions'
 
 const Todo = (props) => {
 
     const history = useHistory();
     let { data, index } = props;
+
+    const onClickTodoDelete = (e) => {
+        e.preventDefault();
+
+        props.deleteTodo(data , res =>{
+            console.log(res);
+        })
+    }
 
     return (
         <div className="mainContainer1">
@@ -29,7 +38,7 @@ const Todo = (props) => {
 
                     </div>
 
-                    <div onClick={() => console.log('delete')}>
+                    <div onClick={(e) => onClickTodoDelete(e)}>
                         <img src={trash} alt={"trash"} className="deleteIcon" />
                     </div>
                 </div>
@@ -45,7 +54,7 @@ const Todo = (props) => {
 
                 <div className="txtDescription">
 
-                Description : Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+                Description :{data?.desc}
                 </div>
             </div>
 
@@ -61,5 +70,5 @@ const mapStateToProps = state => {
 };
 
 
-export default connect(mapStateToProps, {})(Todo);
+export default connect(mapStateToProps, {deleteTodo})(Todo);
 
