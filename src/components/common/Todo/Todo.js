@@ -54,7 +54,7 @@ const Todo = (props) => {
 
                 <div className="txtDescription">
 
-                Description :{data?.desc}
+                Description : {data?.desc}
                 </div>
             </div>
 

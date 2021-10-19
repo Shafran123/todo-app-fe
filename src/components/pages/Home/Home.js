@@ -39,7 +39,7 @@ const Home = (props) => {
             {
                 props?.todo_list?.map((element, index) => {
                     return <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Todo data={element} key={index}  index={index}/>
+                        <Todo data={element} key={element.id}  index={index}/>
                     </div>
 
                 })

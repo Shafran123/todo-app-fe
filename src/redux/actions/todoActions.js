@@ -1,10 +1,13 @@
 import axios from "axios";
 import { GET_TODO_LIST } from "./config";
 
+
+const BASE_URL = 'https://todo-app-aefda.du.r.appspot.com'
+
 export const getTodoList = ( callback) => (dispatch) => {
         
     return axios({
-        url: 'http://localhost:3001/api/v1/get-todo-list',
+        url: `${BASE_URL}/api/v1/get-todo-list`,
         timeout: 20000,
         method: 'get',
         responseType: 'json'
@@ -27,7 +30,7 @@ export const getTodoList = ( callback) => (dispatch) => {
 
 export const addTodo = (body, callback) => (dispatch) => {
     return axios({
-        url: 'http://localhost:3001/api/v1/add-todo',
+        url: `${BASE_URL}/api/v1/add-todo`,
         timeout: 20000,
         method: 'post',
         data:body,
@@ -50,7 +53,7 @@ export const addTodo = (body, callback) => (dispatch) => {
 
 export const editTodo = (body, callback) => (dispatch) => {
     return axios({
-        url: `http://localhost:3001/api/v1/edit-todo?id=${body.id}`,
+        url: `${BASE_URL}/api/v1/edit-todo?id=${body.id}`,
         timeout: 20000,
         method: 'put',
         data:body,
@@ -72,7 +75,7 @@ export const editTodo = (body, callback) => (dispatch) => {
 
 export const deleteTodo = (body, callback) => (dispatch) => {
     return axios({
-        url: `http://localhost:3001/api/v1/delete-todo?id=${body.id}`,
+        url: `${BASE_URL}/api/v1/delete-todo?id=${body.id}`,
         timeout: 20000,
         method: 'delete',
         responseType: 'json'
