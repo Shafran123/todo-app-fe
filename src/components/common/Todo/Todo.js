@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router';
 import edit from '../../../assets/icons/edit.png'
 import trash from '../../../assets/icons/trash.png'
 import './Todo.css'
@@ -7,7 +8,7 @@ import './Todo.css'
 
 const Todo = (props) => {
 
-
+    const history = useHistory();
     let { data } = props;
 
     return (
@@ -20,7 +21,7 @@ const Todo = (props) => {
                     {data?.title}
                 </div>
                 <div className="actions">
-                    <div onClick={() => console.log('edit')}>
+                    <div onClick={() => history.push(`/edit-todo/${data.id}`)}>
                         <img src={edit} alt={"edit"} className="editIcon" />
                     </div>
 
