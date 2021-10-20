@@ -1,0 +1,9 @@
+.buttonLayout{
+    display: flex;
+     justify-content: center
+}
+
+.todoListLayout{
+    display: flex;
+    justify-content: center
+}

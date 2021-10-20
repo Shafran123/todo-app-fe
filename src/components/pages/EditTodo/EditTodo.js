@@ -6,6 +6,8 @@ import back from '../../../assets/icons/back.png'
 
 import { editTodo } from '../../../redux/actions/todoActions'
 
+import './EditTodo.css'
+
 const EditTodo = (props) => {
 
     const history = useHistory();
@@ -59,15 +61,15 @@ const EditTodo = (props) => {
     }
 
     return (
-        <div style={{ width: '50vw', textAlign: 'left' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="mainEditTodoLayout">
+            <div className="headingDiv">
                 <div onClick={() => history.push(`/`)}>
                     <img src={back} alt={"back"} className="backIcon" />
                 </div>
-                <div style={{ width: 10 }}>
+                <div className="spacer">
 
                 </div>
-                <h3 style={{ textAlign: 'left', margin: 0 }}>
+                <h3 className="txtHeading">
                     📝 Edit Todo
                 </h3>
             </div>

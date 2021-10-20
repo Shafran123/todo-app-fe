@@ -7,6 +7,8 @@ import AddButton from '../../common/AddButton/AddButton';
 import Todo from '../../common/Todo/Todo';
 import * as  firestore from "../../../utils/friebase";
 
+import './Home.css'
+
 const Home = (props) => {
 
     const history = useHistory();
@@ -30,7 +32,7 @@ const Home = (props) => {
     return (
         <div>
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="buttonLayout">
 
                 <AddButton />
 
@@ -38,7 +40,7 @@ const Home = (props) => {
 
             {
                 props?.todo_list?.map((element, index) => {
-                    return <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    return <div className="todoListLayout">
                         <Todo data={element} key={element.id}  index={index}/>
                     </div>
 

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
 
 import { addTodo } from '../../../redux/actions/todoActions'
+import back from '../../../assets/icons/back.png'
+import './AddTodo.css'
 
 const AddTodo = (props) => {
 
@@ -42,10 +44,19 @@ const AddTodo = (props) => {
     }
 
     return (
-        <div style={{ width: '50vw', textAlign: 'left' }}>
-            <h3 style={{ textAlign: 'left' }}>
-                📝 Add Todo
-            </h3>
+        <div className="mainAddTodoLayout">
+            <div className="headingDiv">
+                <div onClick={() => history.push(`/`)}>
+                    <img src={back} alt={"back"} className="backIcon" />
+                </div>
+                <div className="spacer">
+
+                </div>
+                <h3 className="txtHeading">
+                    📝 Add Todo
+                </h3>
+            </div>
+
 
             {scuess ?
                 <div class="alert alert-success mt-3" role="alert">

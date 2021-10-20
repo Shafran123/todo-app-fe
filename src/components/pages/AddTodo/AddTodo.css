@@ -1,11 +1,6 @@
-.mainEditTodoLayout{
+.mainAddTodoLayout{
     width: 50vw;
     text-align: left;
-}
-
-.backIcon{
-    height: 18px;
-    width: 18px;
 }
 
 .headingDiv{
@@ -24,10 +19,9 @@
     margin: 0px;
 }
 
-
 @media only screen and (max-width: 700px) {
 
-    .mainEditTodoLayout{
+    .mainAddTodoLayout{
         width: 80%;
     }
   }
