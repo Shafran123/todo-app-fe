@@ -21,7 +21,7 @@ const Todo = (props) => {
     }
 
     return (
-        <div className="mainContainer1">
+        <div className="mainLayout">
             <div className="mainContainer">
                 <div className="txtTitle">
                     <span>

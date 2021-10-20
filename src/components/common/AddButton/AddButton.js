@@ -11,7 +11,7 @@ const AddButton = (props) => {
     let { data } = props;
 
     return (
-        <div onClick={() =>  history.push("/add-todo")} style={{ width: '50vw' , display: 'flex' , justifyContent: 'flex-end' , marginBottom: 10}}>
+        <div onClick={() =>  history.push("/add-todo")} className="buttonLayoutDiv">
             <div className="buttonMainDiv">
                 Add Todo
             </div>

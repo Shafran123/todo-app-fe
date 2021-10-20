@@ -10,3 +10,17 @@
     font-size: 14px;
     font-weight: 600;
 }
+
+.buttonLayoutDiv{
+    width: '50vw' ; 
+    display: 'flex'; 
+    justify-content: 'flex-end'; 
+    margin-bottom: 10px
+}
+
+
+@media only screen and (max-width: 700px) {
+    .buttonLayoutDiv{
+        width: auto !important;
+    }
+  }
